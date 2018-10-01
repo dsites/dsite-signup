@@ -1,0 +1,23 @@
+{
+  "development": {
+    "use_env_variable": "DATABASE_URL",
+    "operatorsAliases": false,
+    "dialectOptions": {
+      "ssl": false
+    }
+  },
+  "staging": {
+    "use_env_variable": "DATABASE_URL",
+    "operatorsAliases": false,
+    "dialectOptions": {
+      "ssl": false
+    }
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "operatorsAliases": false,
+    "dialectOptions": {
+      "ssl": true
+    }
+  }
+}

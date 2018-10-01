@@ -1,0 +1,285 @@
+@import "../styles/screen-sizes";
+
+.signup-bg-left {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  background: #fff;
+}
+
+.signup-bg-right {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  z-index: -1;
+  right: 0;
+  background: #fafbfb;
+
+  @media (max-width: @screen-md) {
+    display: none;
+  }
+}
+
+.Signup_main {
+  height: 100%;
+}
+
+.Signup__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1400px;
+  margin: 0 auto;
+  @media (min-width: @screen-md) {
+     height: 100%;
+   }
+  .Signup__form, .Signup__icons {
+    max-width: 600px;
+    min-height: 600px;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 50px;
+
+    @media (max-width: @screen-md) {
+      padding: 50px 20px;
+      margin-top: 50px;
+    }
+  }
+
+  .Signup__icons {
+    text-align: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-top: 50px;
+    &.username-icons {
+      flex-direction: column;
+    }
+    @media (max-width: @screen-md) {
+      display: none;
+    }
+  }
+
+  .Signup__header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 50px;
+    flex: 1;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+
+    .Signup__steps {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+
+      .Signup__steps-step {
+        width: 10px;
+        height: 10px;
+        line-height: 14px;
+        background: #eff4f8;
+        display: inline-block;
+        border-radius: 5px;
+        margin-right: 8px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.waiting {
+          width: 14px;
+          height: 14px;
+          line-height: 14px;
+          border-radius: 7px;
+          background: #4ba2f2;
+        }
+
+        &.processed {
+          background: #4ba2f2;
+        }
+      }
+    }
+  }
+
+  .Signup__form {
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .form-actions {
+      position: absolute;
+      width: calc(~'100% - 100px');
+
+      @media (max-width: @screen-md) {
+        width: calc(~'100% - 40px');
+        max-width: 460px;
+      }
+    }
+
+    .form-content {
+      max-height: 100%;
+      flex: 1;
+      margin-top: -30px;
+
+      &.two-actions {
+        margin-top: -73px;
+      }
+    }
+
+    .ant-input {
+      color: rgba(51, 51, 51, 0.5);
+    }
+
+    .ant-form-item {
+      margin-bottom: 10px;
+    }
+
+    .ant-btn-primary {
+      background-color: #4ba2f2;
+      border-color: #4ba2f2;
+      box-shadow: 0 3px 8px 0 rgba(26, 80, 153, 0.3);
+    }
+
+    .ant-select-selection-selected-value {
+      color: #333;
+      margin-left: 15px;
+      font-weight: 600;
+    }
+
+    .has-success.has-feedback:after, .has-warning.has-feedback:after, .has-error.has-feedback:after, .is-validating.has-feedback:after {
+      font-size: 18px;
+    }
+
+    .has-success {
+      input {
+        border: 1px solid #88d569;
+      }
+    }
+
+    .has-error {
+      input {
+        border: 1px solid #f2564b;
+      }
+      .ant-form-explain {
+        text-align: left;
+        line-height: 1.3;
+      }
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+      padding-bottom: 30px;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    .ant-form-item-control {
+      text-align: center;
+    }
+
+    button.back {
+      color: #4ba2f2;
+      background: none;
+      font-size: 16px;
+      border: none;
+      &:hover {
+        color: #4ba2f2;
+      }
+    }
+
+    .password-step {
+      .ant-form-item-control {
+        text-align: left;
+      }
+    }
+
+    .confirm-phone, .password-step {
+      .ant-input-affix-wrapper .ant-input:not(:last-child) {
+        padding-right: 100px;
+      }
+      .has-success.has-feedback:after, .has-warning.has-feedback:after, .has-error.has-feedback:after, .is-validating.has-feedback:after {
+        right: 60px;
+      }
+    }
+    a.new-password, a.redirect-btn {
+      text-align: center;
+      width: 100%;
+      background-color: #fff;
+      border: solid 2px #4ba2f2;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      height: 50px;
+      color: #4ba2f2;
+      display: block;
+      border-radius: 5px;
+    }
+
+    a.complete-signup {
+      background-color: #4ba2f2;
+      border-color: #4ba2f2;
+      box-shadow: 0 3px 8px 0 rgba(26, 80, 153, 0.3);
+      width: 100%;
+      color: #fff;
+      display: block;
+      padding: 0 1.5em;
+      font-size: 20px;
+      border-radius: 4px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+
+      &:hover {
+        text-decoration: none;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+#signup-username, #signup-password, #signup-error {
+  width: 392px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#signup-email {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#signup-email-confirmation {
+  width: 382px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#signup-phone, #signup-sms {
+  width: 369px;
+  height: auto;
+  margin: 0 auto;
+}
+#signup-create-account {
+  width: 320px;
+  height: auto;
+  margin: 0 auto;
+}
+.signin_redirect {
+  text-align: left;
+  font-size: 14px;
+}

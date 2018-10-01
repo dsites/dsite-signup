@@ -1,0 +1,73 @@
+{
+  "name": "dsite",
+  "scripts": {
+  },
+  "env": {
+    "DATABASE_NAME": {
+      "required": true
+    },
+    "DATABASE_URL": {
+      "required": true
+    },
+    "JWT_SECRET": {
+      "required": true
+    },
+    "SENDGRID_API_KEY": {
+      "required": true
+    },
+    "STAGING_JAWSDB_URL": {
+      "required": true
+    },
+    "TWILIO_ACCOUNT_SID": {
+      "required": true
+    },
+    "TWILIO_AUTH_TOKEN": {
+      "required": true
+    },
+    "TWILIO_PHONE_NUMBER": {
+      "required": true
+    },
+    "RECAPTCHA_SECRET": {
+      "required": true
+    },
+    "RECAPTCHA_SITE_KEY": {
+      "required": true
+    },
+    "DELEGATOR_ACTIVE_WIF": {
+      "required": true
+    },
+    "DELEGATOR_USERNAME": {
+      "required": true
+    },
+    "CREATE_ACCOUNT_DELEGATION": {
+      "required": true
+    },
+    "CONVEYOR_USERNAME": {
+      "required": true
+    },
+    "CONVEYOR_POSTING_WIF": {
+      "required": true
+    },
+    "CREATE_USER_SECRET": {
+      "required": true
+    },
+    "CREATE_USER_URL": {
+      "required": true
+    },
+    "DPAYJS_URL": {
+      "required": true
+    },
+    "LOG_FORMAT": "short",
+    "DEFAULT_REDIRECT_URI": ""
+  },
+  "formation": {
+  },
+  "addons": [
+    "jawsdb"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

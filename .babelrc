@@ -1,0 +1,18 @@
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-2"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["react-hot-loader/babel"]
+    }
+  },
+  "plugins": [
+    ["import", { "libraryName": "antd" }],
+    "transform-decorators-legacy",
+    "transform-runtime",
+    "lodash"
+  ]
+}
